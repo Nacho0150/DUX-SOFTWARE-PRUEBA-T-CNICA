@@ -1,0 +1,5 @@
+
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8†Ñ¥Éå1J$5f76087d-92e6-4a44-80b5-4db073165da6
+›
+java:S3305"XInject this field value directly into "userDetailService", the only method that uses it.(¼²Æ÷8‡Ñ¥Éå1J$0158624c-282a-4ff9-b411-03f0666afa5b

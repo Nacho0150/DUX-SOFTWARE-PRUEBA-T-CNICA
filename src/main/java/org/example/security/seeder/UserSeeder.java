@@ -32,7 +32,6 @@ public class UserSeeder implements CommandLineRunner {
     }
 
     private void createUser(String name, String password) {
-
         UserEntity user = new UserEntity(
                 name,
                 passwordEncoder.encode(password)

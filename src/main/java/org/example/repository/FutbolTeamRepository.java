@@ -12,4 +12,10 @@ public interface FutbolTeamRepository extends JpaRepository<FutbolTeamEntity, Lo
 
     @Query("select f from FutbolTeamEntity f where f.nombre like concat('%', ?1, '%')")
     List<FutbolTeamEntity> findAllByName(String nombre);
+
+    @Query("select f from FutbolTeamEntity f where f.nombre like concat('%', ?1, '%')")
+    FutbolTeamEntity findByName(String nombre);
+
+    @Query(value = "SELECT MAX(ID) FROM equipos", nativeQuery = true)
+    Long findMaxId();
 }

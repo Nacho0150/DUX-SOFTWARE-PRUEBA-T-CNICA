@@ -30,26 +30,28 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private JwtUtils jwtUtils;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-            throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         final String token = getTokenFromRequest(request);
         final String username;
 
-        if (token==null)
-        {
+        // Excluir la ruta de la documentación de Swagger de la autenticación JWT
+        if (request.getRequestURI().startsWith("/doc/swagger-ui.html") || request.getRequestURI().startsWith("/api/docs") || request.getRequestURI().startsWith("/swagger-ui-custom.html")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        if (token==null) {
             filterChain.doFilter(request, response);
             return;
         }
 
         username = jwtUtils.getUsernameFromToken(token);
 
-        if (username!=null && SecurityContextHolder.getContext().getAuthentication()==null)
-        {
+        if (username!=null && SecurityContextHolder.getContext().getAuthentication()==null) {
             UserDetails userDetails=userDetailsService.loadUserByUsername(username);
 
-            if (jwtUtils.isTokenValid(token, userDetails))
-            {
+            if (jwtUtils.isTokenValid(token, userDetails)) {
                 UsernamePasswordAuthenticationToken authToken= new UsernamePasswordAuthenticationToken(
                         userDetails,
                         null,
@@ -67,8 +69,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private String getTokenFromRequest(HttpServletRequest request) {
         final String authHeader=request.getHeader(HttpHeaders.AUTHORIZATION);
 
-        if(StringUtils.hasText(authHeader) && authHeader.startsWith("Bearer "))
-        {
+        if(StringUtils.hasText(authHeader) && authHeader.startsWith("Bearer ")) {
             return authHeader.substring(7);
         }
         return null;

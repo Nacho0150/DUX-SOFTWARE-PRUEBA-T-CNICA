@@ -1,5 +1,5 @@
 
 ”
-java:S1612"LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(­µğşÿÿÿÿ8è—¸Äå1J$1aab3cf6-9cbe-4d0b-9f63-38ec910013c0
+java:S1612"LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(­µğşÿÿÿÿ8£Œòå1J$a5ab1785-66ec-49d1-a738-2572a6714398
 Š
-java:S5738'"HRemove this call to a deprecated method, it has been marked for removal.(½¥¥98ì—¸Äå1J$fed0b08a-e722-40be-b754-7ae358ea829a
+java:S57386"HRemove this call to a deprecated method, it has been marked for removal.(½¥¥98¥Œòå1J$8552a354-276e-409f-adb9-db2c73fb77bb

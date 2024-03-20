@@ -55,8 +55,6 @@ m
 =src/main/java/org/example/security/service/ConfigService.java,a\1\a14e25df2d9071647c00f6d7bf45f711ecda093c
 k
 ;src/main/java/org/example/security/config/WebMvcConfig.java,b\a\bafcf46f2be6e7b0e84a8234fc265e9ef1204059
-a
-1src/main/java/org/example/script/futbol_teams.sql,4\8\48b4250ef7bf7f4d4f1393002821434facd5aadc
 Å
 Q.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,2\c\2cabb939da04d3de3a200bf2b575690e1a16316d
 Å
@@ -81,10 +79,6 @@ Q.idea/sonarlint/securityhotspotstore/5/e/5eb957effc61ab7d0dddf72f2025c80a66be94
 Q.idea/sonarlint/securityhotspotstore/a/6/a6d8b8556fee0e03112ce2bf34b8cb27a7dc9e58,4\7\478454b0be62bf31f7c289d46288c411a12a2f14
 Å
 Q.idea/sonarlint/securityhotspotstore/0/b/0bd37ba559ed62b635e360ae15c9e5f885628879,6\a\6a4a33d5e02177aab9c53bccae9268d3e8004edd
-Å
-Q.idea/sonarlint/securityhotspotstore/3/f/3f2f4afe99a3433a7b336ba8ca87abf63f425462,3\b\3b406536666b6e4839e5fd097a1c7daf9573ee0e
-Å
-Q.idea/sonarlint/securityhotspotstore/9/b/9b5dcf0f61ffeecb93a348e91ec89be29340d996,0\9\09f2c9f67335e27b9d44ee9ae020c3da82b7d3ef
 Å
 Q.idea/sonarlint/securityhotspotstore/6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4,5\e\5e4805de49b3e0799af661639276d994cb0e08ae
 w
@@ -156,8 +150,6 @@ G.idea/sonarlint/issuestore/5/4/54078e63393c9f0308129c64a40f5d2f0458077c,5\f\5f
 Å
 Q.idea/sonarlint/securityhotspotstore/c/6/c6ca0fc1dc72e9a681e0e87d74eba1cb23ecb967,c\2\c266d29e42f074d2060e4e02314ca7b5ab8da028
 w
-G.idea/sonarlint/issuestore/0/9/09f2c9f67335e27b9d44ee9ae020c3da82b7d3ef,1\9\192261d95f8dadfd7cf433bc2c954f1f1c36f3ea
-w
 G.idea/sonarlint/issuestore/2/9/294bccec13dabc7c9036ca773148c98d5fb9bf5c,8\0\80107b46984d947913315001e3a8bc4f73f94f79
 w
 G.idea/sonarlint/issuestore/2/c/2cabb939da04d3de3a200bf2b575690e1a16316d,1\0\10f2119b18de4c2d93011c2acd27301df22c2983
@@ -173,8 +165,6 @@ Q.idea/sonarlint/securityhotspotstore/4/0/409d55d8af85ea0d29742ed7de71656474f83c
 Q.idea/sonarlint/securityhotspotstore/4/b/4b5efe7385927271972e91067ead07a2c9521641,1\b\1b3e234a44ea073152015a1d6d68dcd25c08531d
 Å
 Q.idea/sonarlint/securityhotspotstore/4/0/406292f3061b0267b4aaf2cc68329088230ee7c1,2\7\277c948ad25e4b53f25ad1420d672a1eb4028372
-Å
-Q.idea/sonarlint/securityhotspotstore/4/8/48b4250ef7bf7f4d4f1393002821434facd5aadc,c\8\c8488ec3168ca852efeb658eeb61cd65f85dc3e3
 Å
 Q.idea/sonarlint/securityhotspotstore/4/f/4fb08b606fc4f18315b8598639996b6acaafb25d,9\9\990d55f87aefc376342395b9ede3c5683413b352
 Å
@@ -203,8 +193,6 @@ G.idea/sonarlint/issuestore/5/1/510ef52700789bb733c5a397881bd1e0397a9405,9\2\92
 Q.idea/sonarlint/securityhotspotstore/0/5/056de5d9f62b756ea69e4f755f0b52c180ee287d,7\6\761b7f04d863a865580876fe5ee058293afa172f
 Å
 Q.idea/sonarlint/securityhotspotstore/8/3/83ea3befda8ef7d74f6e46a61946515c53e05f48,f\8\f801694d28454e9271386cbee98ded2d8a955d8d
-Å
-Q.idea/sonarlint/securityhotspotstore/3/b/3b406536666b6e4839e5fd097a1c7daf9573ee0e,9\3\932ed2c8a93c505ec4fa37102dfeb281d8430f54
 Å
 Q.idea/sonarlint/securityhotspotstore/8/f/8f759bdde8ca288f359178b2726b1d6cc1c49734,0\b\0bd49ddba9665e8100c6b3d96dee79bf1c330fea
 Å
@@ -235,8 +223,6 @@ Q.idea/sonarlint/securityhotspotstore/a/b/abfc17f229f9402c1196dde4cb153e850c693d
 Q.idea/sonarlint/securityhotspotstore/6/a/6a4a33d5e02177aab9c53bccae9268d3e8004edd,7\7\77daa6215aef887ad89768cbc858b26ebf86ecd6
 Å
 Q.idea/sonarlint/securityhotspotstore/a/9/a9adc9217de55fda086b41ff4ae0af628875b198,1\4\14a6641e537c2ae36f18fe3cec37eac6f84081a3
-Å
-Q.idea/sonarlint/securityhotspotstore/0/9/09f2c9f67335e27b9d44ee9ae020c3da82b7d3ef,a\0\a0d977c78aa534b8d2134a1f85eccfd7689fd879
 w
 G.idea/sonarlint/issuestore/5/e/5e4805de49b3e0799af661639276d994cb0e08ae,0\b\0bafecc5350071d269191d61db01cc3f5cbcc007
 Å
@@ -247,10 +233,6 @@ w
 G.idea/sonarlint/issuestore/4/0/409d55d8af85ea0d29742ed7de71656474f83ca9,5\2\52ef1cee11330c8abd76568c440a004af8c62c31
 w
 G.idea/sonarlint/issuestore/4/7/478454b0be62bf31f7c289d46288c411a12a2f14,1\3\130bfcfad8658596e07ff464ba17bf7cd2d3d248
-w
-G.idea/sonarlint/issuestore/3/b/3b406536666b6e4839e5fd097a1c7daf9573ee0e,5\b\5bacf7f0ac3e8775d160d3c17aff7ba3e368fdf2
-w
-G.idea/sonarlint/issuestore/4/8/48b4250ef7bf7f4d4f1393002821434facd5aadc,7\2\72ae097e7689d53c6bcf7842b142264f1de159c6
 w
 G.idea/sonarlint/issuestore/4/b/4b5efe7385927271972e91067ead07a2c9521641,c\4\c41b8c88d2dc1f063efed1e009985a4c32038f0e
 w
@@ -291,3 +273,15 @@ Q.idea/sonarlint/securityhotspotstore/e/d/ed54bab89c252fdd4db5a145f7620a97e772d8
 Q.idea/sonarlint/securityhotspotstore/e/5/e522c1cf5ae6402ba0f08e13e9766bd337634aea,4\2\42404804ce20681c9d41f3fabbe6af65b6f109d8
 w
 G.idea/sonarlint/issuestore/0/5/056de5d9f62b756ea69e4f755f0b52c180ee287d,3\b\3b97cd377626b8f2d836ba92b2315f85c8d54cc7
+l
+<src/main/java/org/example/security/config/SwaggerConfig.java,d\a\dae415aaa8bf340fa06c498dedc14c97849828a3
+l
+<src/test/java/org/example/controller/TeamControllerTest.java,f\e\fe89a75f9c672038ff53c30bcc3dcf75dd3b6cbf
+y
+Isrc/test/java/org/example/security/controller/UserAuthControllerTest.java,3\9\398ebf035b9f7da7f08fc804f0093165d0f22f1b
+r
+Bsrc/test/java/org/example/security/controller/utils/AuthBasic.java,6\e\6eba5f539e016f4d6cc5fba803c6b2ddec844467
+f
+6src/main/java/org/example/exception/ErrorResponse.java,9\b\9b16bda08453ff0ac2892b64307d03715ce5e359
+S
+#src/main/resources/futbol_teams.sql,b\6\b69d62ee5b7fede4ba992267ae086c587b51ba1e

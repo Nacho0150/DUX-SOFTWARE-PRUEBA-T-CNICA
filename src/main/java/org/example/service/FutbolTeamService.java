@@ -3,20 +3,19 @@ package org.example.service;
 import org.example.DTO.FutbolTeamDTO;
 import org.example.exception.Exceptions;
 
-import java.text.ParseException;
 import java.util.List;
 
 public interface FutbolTeamService {
 
-    List<FutbolTeamDTO> getAllFutbolTeams();
+    List<FutbolTeamDTO> getAllFutbolTeams() throws Exceptions;
 
-    FutbolTeamDTO getFutbolTeamById(Long id) throws ParseException, Exceptions;
+    FutbolTeamDTO getFutbolTeamById(Long id) throws Exceptions;
 
-    List<FutbolTeamDTO> getFutbolTeamsByName(String nombre) throws ParseException;
+    List<FutbolTeamDTO> getFutbolTeamsByName(String nombre) throws Exceptions;
 
-    FutbolTeamDTO save(FutbolTeamDTO futbolTeam) throws ParseException;
+    FutbolTeamDTO save(FutbolTeamDTO futbolTeam) throws Exceptions;
 
-    FutbolTeamDTO update(Long id, FutbolTeamDTO futbolTeam) throws ParseException, Exceptions;
+    FutbolTeamDTO update(Long id, FutbolTeamDTO futbolTeam) throws Exceptions;
 
-    void delete(Long id) throws ParseException;
+    void delete(Long id) throws Exceptions;
 }

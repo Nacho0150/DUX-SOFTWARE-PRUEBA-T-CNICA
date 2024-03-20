@@ -2,7 +2,6 @@ package org.example.security.config;
 
 import lombok.RequiredArgsConstructor;
 import org.example.security.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,20 +17,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    @Autowired
-    private final UserRepository userRepository;
-
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception
-    {
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider()
+    public AuthenticationProvider authenticationProvider(UserRepository userRepository)
     {
         DaoAuthenticationProvider authenticationProvider= new DaoAuthenticationProvider();
-        authenticationProvider.setUserDetailsService(userDetailService());
+        authenticationProvider.setUserDetailsService(userDetailService(userRepository));
         authenticationProvider.setPasswordEncoder(passwordEncoder());
         return authenticationProvider;
     }
@@ -42,7 +37,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailService() {
+    public UserDetailsService userDetailService(UserRepository userRepository) {
         return username -> userRepository.findByUsername(username)
                 .orElseThrow(()-> new UsernameNotFoundException("User not fournd"));
     }

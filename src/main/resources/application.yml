@@ -1,7 +1,17 @@
 # See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# Configuraciones de Spring Boot y Swagger
 spring:
-  thymeleaf.cache: false
-  main.show-banner: false
+  devtools:
+    add-properties: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  thymeleaf:
+    cache: false
+  main:
+    show-banner: false
+    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
@@ -16,3 +26,26 @@ spring:
 properties:
   hibernate:
     dialect: org.hibernate.dialect.H2Dialect
+
+# Configuraciones de Swagger
+#springdoc:
+#  api-docs:
+#    path: /v3/api-docs  # Cambia la ruta según tu preferencia
+#  swagger-ui:
+#    path: /swagger-ui.html  # Cambia la ruta según tu preferencia
+#    enabled: true
+#  version: "1.0"
+project:
+  version: ${project.version}
+springdoc:
+  api-docs:
+    path: /api/docs
+    enabled: true
+  swagger-ui:
+    operationsSorter: method
+    path: /doc/swagger-ui.html
+    default-models-expand-depth: -1
+    tags-sorter: alpha
+    enabled: true
+  paths-to-exclude: /swagger-resources/**, /users/accessdenied
+  paths-to-match: /test/**, /support/**, /xyz/**

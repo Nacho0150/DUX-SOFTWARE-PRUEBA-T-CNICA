@@ -9,12 +9,12 @@ import lombok.Setter;
 @Setter
 @RequiredArgsConstructor
 public class FutbolTeamDTO {
-    @Schema(name = "id", description = "ID del equipo", example = "1", type = "Long", hidden = true)
+    @Schema(name = "id", description = "ID del equipo", example = "2", type = "Long")
     Long id;
-    @Schema(name = "nombre", description = "Nombre del equipo", example = "Real Madrid", type = "String", hidden = true)
+    @Schema(name = "nombre", description = "Nombre del equipo", example = "Barcelona FC", type = "String")
     String nombre;
-    @Schema(name = "liga", description = "Liga del equipo", example = "La Liga", type = "String", hidden = true)
+    @Schema(name = "liga", description = "Liga del equipo", example = "La Liga", type = "String")
     String liga;
-    @Schema(name = "pais", description = "País del equipo", example = "España", type = "String", hidden = true)
+    @Schema(name = "pais", description = "País del equipo", example = "España", type = "String")
     String pais;
 }

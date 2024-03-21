@@ -31,19 +31,10 @@ public class SecurityConfiguration {
                                 .requestMatchers("/h2-console/**").permitAll()
                                 .requestMatchers(
                                         "/api/docs/**",
-                                        "/v1/api/get-token",
-                                        "/api/doc/**",
-                                        "/api/doc/swagger-ui.html/**",
-                                        "/doc/swagger-ui.html/**",
-                                        "/api/doc/swagger-ui-custom.html/**",
-                                        "/api/docs/swagger-ui-custom.html/**",
-                                        "/v3/api-docs/**",
-                                        "/v3/api-doc/**",
                                         "/swagger-ui/**",
                                         "/configuration/ui",
-                                        "/swagger-ui.html/**",
-                                        "/swagger-resources/**",
-                                        "/webjars/**").permitAll()
+                                        "/swagger-ui/index.html/**",
+                                        "/swagger-resources/**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManager ->

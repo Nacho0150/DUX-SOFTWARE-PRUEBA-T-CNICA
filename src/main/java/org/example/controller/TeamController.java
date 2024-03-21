@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
 import org.example.DTO.FutbolTeamDTO;
 import org.example.exception.Exceptions;
 import org.example.service.FutbolTeamService;
@@ -19,6 +20,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/equipos")
 @Tag(name = "Equipos", description = "Crea, muestra, elimina y actualiza Equipos")
 public class TeamController {
@@ -30,7 +32,7 @@ public class TeamController {
     private static final String ERROR_NOT_FOUND = "Equipo no encontrado: ";
 
     @Tag(name = "Equipos")
-    @Operation(summary = "Obtiene todos los equipos")
+    @Operation(summary = "Obtención de todos los equipos")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Devuelve la lista de todos los equipos de fútbol registrados",
                     content = { @Content(mediaType = "application/json",
@@ -49,7 +51,7 @@ public class TeamController {
     }
 
     @Tag(name = "Equipos")
-    @Operation(summary = "Obtiene a un equipo por id")
+    @Operation(summary = "Obtención de un equipo por id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Devuelve la información del equipo correspondiente al ID proporcionado",
                     content = { @Content(mediaType = "application/json",
@@ -68,7 +70,7 @@ public class TeamController {
     }
 
     @Tag(name = "Equipos")
-    @Operation(summary = "Obtiene una lista o un equipo por nombre")
+    @Operation(summary = "Obtención de lista o un equipo por nombre")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Devuelve la lista de equipos cuyos nombres contienen el valor proporcionado en el parámetro de búsqueda",
                     content = { @Content(mediaType = "application/json",
@@ -87,7 +89,7 @@ public class TeamController {
     }
 
     @Tag(name = "Equipos")
-    @Operation(summary = "Crea equipos")
+    @Operation(summary = "Creación de equipos")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "El equipo fue creado con éxito",
                     content = { @Content(mediaType = "application/json",
@@ -125,7 +127,7 @@ public class TeamController {
     }
 
     @Tag(name = "Equipos")
-    @Operation(summary = "Elimina un equipo por id")
+    @Operation(summary = "Eliminación de un equipo por id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "El equipo fue eliminado con éxito",
                     content = { @Content(mediaType = "application/json",

@@ -54,7 +54,7 @@ public class FutbolTeamServiceImpl implements FutbolTeamService {
     public FutbolTeamDTO save(FutbolTeamDTO futbolTeamDTO) throws Exceptions {
         FutbolTeamEntity entitySaved = null;
         FutbolTeamEntity entity = futbolTeamMapper.futbolTeamDTOToEntity(futbolTeamDTO);
-        if(futbolTeamRepository.findByName(entity.getNombre()) == null){
+        if (futbolTeamRepository.findByName(entity.getNombre()) == null) {
             entitySaved = futbolTeamRepository.save(entity);
         } else {
             throw new Exceptions("El equipo ya existe");

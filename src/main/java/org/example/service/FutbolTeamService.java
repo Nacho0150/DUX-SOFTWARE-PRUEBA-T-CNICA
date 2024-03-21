@@ -15,7 +15,7 @@ public interface FutbolTeamService {
 
     FutbolTeamDTO save(FutbolTeamDTO futbolTeam) throws Exceptions;
 
-    FutbolTeamDTO update(Long id, FutbolTeamDTO futbolTeam) throws Exceptions;
+    FutbolTeamDTO update(Long id, FutbolTeamDTO futbolTeam);
 
     void delete(Long id) throws Exceptions;
 }

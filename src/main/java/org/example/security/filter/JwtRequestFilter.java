@@ -40,7 +40,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             try {
                 username = jwtUtils.getUsernameFromToken(token);
             } catch (Exceptions e){
-                new Exceptions(e.getMessage());
+                throw new Exceptions(e.getMessage());
             }
         }
 

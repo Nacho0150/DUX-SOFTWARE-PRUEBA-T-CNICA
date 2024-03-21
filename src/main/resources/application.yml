@@ -37,6 +37,7 @@ springdoc:
   swagger-ui:
     operationsSorter: method
     path: /index.html
+#path completa: http://localhost:8080/swagger-ui/index.html
     default-models-expand-depth: -1
     tags-sorter: alpha
     enabled: true

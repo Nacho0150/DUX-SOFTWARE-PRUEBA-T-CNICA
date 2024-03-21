@@ -9,11 +9,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -32,24 +35,33 @@ public class AuthBasic {
     protected ObjectMapper objectMapper;
 
     protected UserEntity user;
-    protected AuthenticationResponse response;
-    protected AuthenticationRequest authenticationRequest;
     protected String jwt;
 
     @BeforeEach
     protected void setup() {
         mockMvc = MockMvcBuilders.webAppContextSetup(context).apply(springSecurity()).build();
-        //LOGIN REQUEST
-        authenticationRequest = new AuthenticationRequest();
-        authenticationRequest.setUsername("test");
-        authenticationRequest.setPassword("12345");
-        //USER ENTITY
+        // Crea un usuario
         user = new UserEntity();
         user.setId(1L);
         user.setUsername("test");
+        // Genera el token JWT
         jwt = jwtUtil.getToken(user);
-        //RESPONSE
-//        response = new AuthenticationResponse();
-//        response.setJwt("token");
+    }
+
+    protected String obtainAccessToken(String username, String password) throws Exception {
+
+        // Construye la solicitud de autenticación
+        AuthenticationRequest authenticationRequest = new AuthenticationRequest(username, password);
+
+        // Enviar solicitud de autenticación al endpoint de login
+        String responseString = mockMvc.perform(post("/auth/login")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(authenticationRequest)))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        // Parsea la respuesta para obtener el token JWT
+        AuthenticationResponse authenticationResponse = objectMapper.readValue(responseString, AuthenticationResponse.class);
+        return authenticationResponse.getJwt();
     }
 }
